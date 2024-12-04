@@ -1,0 +1,98 @@
+body {
+  /*  background-color: grey*/
+	background: linear-gradient(rgb(30, 114, 198), rgb(51, 4, 95))
+}
+
+p {
+	color :rgb(196, 183, 236);
+	font-family: "Manrope", sans-serif;
+	font-size:1.1em;
+	font-style: normal;
+	text-align: center;
+}
+
+header {
+  background-color: rgb(14, 64, 121);
+  padding: 20px 50px;
+  opacity: 80%;
+}
+
+h2 {
+	font-family: "Montserrat", sans-serif;
+	color :#A5B4FC;
+	font-size: 3.5em;
+	font-weight: 300;
+	text-align: center;
+	padding: 150px;
+	margin:auto;
+/*  BACKGROUND IMAGE
+	background-image: url(image/wp.jpg);
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;*/
+}
+
+a {
+	color: rgb(57, 64, 130); /* Couleur normale du lien */
+	text-decoration: none; /* Enlève le soulignement */
+}
+
+a:visited {
+	color: rgb(57, 64, 130); /* lien visité */
+}
+
+a:hover {
+	color: blue; /* lien au survol */
+}
+
+a:active {
+	color: rgb(100, 22, 70); /* lien cliqué */
+}
+
+.red_word {
+	color :crimson;
+	font-size:large;
+	font-style: oblique;
+	font-weight: 500;
+}
+
+.btn {
+	background-color: rgb(196, 183, 236);
+	padding: 10px;
+	margin : 30px;
+	border-radius: 15px 15px 15px 15px;
+}
+
+.list {
+	font-family: "Manrope", "sans-serif";
+	color : grey;
+	font-size: 1em;
+	text-align: center;
+}
+
+.link {
+	text-align: center;
+	background-color: rgb(132, 114, 151);
+	opacity: 1.8;
+}
+
+.box {
+	background-color: aquamarine;
+	font-family: "Montserrat", sans-serif;
+	width: 150px;
+	height: 150px;
+	padding: 10px;
+	margin : 20px;
+	border-radius: 15px 15px 15px 15px;
+
+	display: flex; /*Applique flexbox*/
+	justify-content: center; /*Centre le texte horizontalement.*/
+	align-items: center; /*Centre le texte verticalement.*/
+}
+
+.container {
+	display: flex;
+	flex-direction: row; /*disposés horizontalement */
+	flex-wrap: wrap; /*taille ecran /n */
+	justify-content: center;
+}
