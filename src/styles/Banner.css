@@ -1,0 +1,8 @@
+
+.port_banner {
+    background-color: black;
+    color:pink;
+    text-align: right;
+    padding : 32px;
+    border-bottom: solid 3px black;
+}
