@@ -1,8 +1,30 @@
 
-.port_banner {
-    background-color: black;
+.port-banner {
+    background-color: rgb(220, 9, 9);
     color:pink;
-    text-align: right;
+    text-align: left;
     padding : 32px;
     border-bottom: solid 3px black;
 }
+
+
+.banner_logo {
+    height: 10vmin;
+    pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .banner_logo {
+      animation: App-logo-spin infinite 5s linear;
+    }
+  }
+  
+@keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
