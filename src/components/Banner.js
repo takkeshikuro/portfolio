@@ -1,18 +1,18 @@
 import '../styles/Banner.css';
-import logo from '../assets/logo.png';
+import tm from '../assets/tm.png';
 
 function Banner() {
-	let title = "My portfolio";
+	let title = "Theo Morikawa";
 	return (<div className='port-banner'>
 		<header>
 			<div className="logo-title">
-				<img src={logo} alt='logo test' className='banner_logo' />
+				<img src={tm} alt='logo' className='banner_logo'/>
 				<h1>{title}</h1>
 			</div>
 			<nav>
 		  		<a href="#about">About</a>
 		  		<a href="#projects">Projects</a>
-		  		<a href="#contact">Resume</a>
+		  		<a href="#resume">Resume</a>
 			</nav>
 	  	</header>
 	</div>);

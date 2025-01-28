@@ -9,7 +9,7 @@ function Projects() {
 		{ title:"Inception", id: 5, bio:"archi quoi"},
 	];
 	return (
-		<div className="projects-list">
+		<div id="projects" className="projects-list">
 			<h1>PROJECTS</h1>
 			<div >
 				{projects_list.map((projects_list) => (

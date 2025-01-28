@@ -2,12 +2,18 @@ import logo from '../logo.svg';
 import '../styles/App.css';
 import Banner from './Banner';
 import Projects from './Project';
+import About from './About';
+import Resume from './Resume';
+import Home from './Home';
 
 function App() {
   return (
     <div className="App">
       <Banner />
+      <Home />
+      <About />
       <Projects />
+      <Resume />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
