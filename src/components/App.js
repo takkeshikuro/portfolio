@@ -1,4 +1,5 @@
 import StarsCanvas from './Stars';
+
 import logo from '../logo.svg';
 import '../styles/App.css';
 import Banner from './Banner';
@@ -10,6 +11,7 @@ import Home from './Home';
 function App() {
   return (
     <div className="App">
+
       <StarsCanvas />
       <Banner />
       <Home />

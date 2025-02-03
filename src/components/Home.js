@@ -1,4 +1,4 @@
-import '../styles/Home.css';
+import '../styles/Home.css'
 import Type from './Type';
 
 function Home() {
