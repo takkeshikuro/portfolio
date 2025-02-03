@@ -2,8 +2,17 @@ html {
   scroll-behavior: smooth;
 }
 
+
 .App {
   text-align: center;
+  position: relative; /* Permet de positionner les enfants par-dessus le fond */
+  z-index: 1; /* Assure que le contenu est au-dessus du fond d'étoiles */
+}
+
+/* Si nécessaire, ajuste les styles pour Banner, Home, etc. */
+.Banner, .Home, .About, .Projects, .Resume {
+  position: relative;
+  z-index: 2; /* Assure que ces éléments sont au-dessus du fond */
 }
 
 .App-logo {
