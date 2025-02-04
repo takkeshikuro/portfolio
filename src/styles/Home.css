@@ -1,24 +1,28 @@
 .Home-page {
     
-    color :rgb(52, 119, 253);
+    color :rgb(99, 51, 240);
 }
 
 .Home-page h1 {
-    font-family: "Alegreya Sans", serif;
-    font-weight: 400;
+    font-family: "Noto Sans JP", serif;
+    font-weight: 300;
     font-style: normal;
 
     text-align: left;
     margin: 50px;
+    margin-top: 25px;
+    margin-bottom: 25px;
     font-size: 5em;
 }
 
 .Home-type {
-    font-family: "Alegreya Sans", serif;
-    font-weight: 500;
+    font-family: "Noto Sans JP", serif;
+    font-weight: 300;
     font-style: normal;
 
     text-align: left;
     margin: 50px;
+    margin-top: 25px;
+    margin-bottom: 200px;
     font-size: 2em;
 }

@@ -1,5 +1,5 @@
 import '../styles/Banner.css';
-import tm from '../assets/tm.png';
+import tm from '../assets/programming.png';
 
 function Banner() {
 	let title = "Theo Morikawa";

@@ -1,6 +1,7 @@
 
 .port-banner {
 	padding: 1rem;
+	padding-top: 0%;
 }
 
 header {
@@ -23,27 +24,28 @@ header h1 {
 	font-style: normal;
 	margin : auto;
 	font-size: 2.5em;
-	color:rgb(110, 107, 217);
+	color:rgb(99, 51, 240);
 }
 
 header nav {
 	display: flex;
-	gap: 4rem;
+	gap: 3rem;
 	padding : 30px;
 }
 
 header nav a {
-	font-family: "Bebas Neue", serif;
-	font-weight: 400;
+	font-family: "Noto Sans JP", serif;
+	font-weight: 300;
 	font-style: normal;
-	font-size: 2.2rem;
+	font-size: 1.5rem;
+
 	text-decoration: none; /* Pas de soulignement */
-	color: rgb(110, 107, 217); /* Couleur du texte */
+	color: rgb(99, 51, 240); /* Couleur du texte */
 	transition: color 0.3s ease; /* Animation sur la couleur au survol */
 }
 
 header nav a:hover {
-	font-size: 2.3rem; /* Augmente légèrement la taille au survol */
+	font-size: 1.6rem; /* Augmente légèrement la taille au survol */
 	color: rgb(0, 123, 255); /* Change la couleur */
 	transition: all 0.3s ease; /* Animation fluide */
 }
@@ -54,8 +56,9 @@ header nav a:hover {
 
 
 .banner_logo {
+	height: auto;
+	width: 50px;
 	margin : 30px;
-	height: 10vmin;
 	pointer-events: none;
 }
 
