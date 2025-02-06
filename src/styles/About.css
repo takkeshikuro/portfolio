@@ -3,7 +3,8 @@
 }
 
 .About-section h2 {
-    font-family: "Noto Sans JP", serif;
+    font-family: "Mada", serif;
+    font-weight: 320;
     text-align: left;
     padding:10px;
     padding-top: 15px;
@@ -13,8 +14,8 @@
 }
 
 .about-text {
-    font-family: "Noto Sans JP", serif;
-	font-weight: 400;
+    font-family: "Mada", serif;
+    font-weight: 320;
 	font-style: normal;
 	font-size: 1.1rem;
     margin : 50px;
@@ -68,8 +69,8 @@
 
 /* Contenu du Modal */
 .modal-content {
-    font-family: "Noto Sans JP", serif;
-	font-weight: 200;
+    font-family: "Mada", serif;
+    font-weight: 320;
 	font-style: normal;
 	font-size: 0.9rem;
     background: rgb(5, 12, 33);
@@ -95,12 +96,12 @@
     line-height: 1.5;
     position: absolute;
     top: 50px;
-    left: 62%;
+    left: 60%;
     transform: translateX(-20%);
     padding: 12px 30px;
     background-color: rgb(5, 12, 33);
     border-radius: 20px;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: bold;
     transition: background-color 0.3s, transform 0.3s;
     cursor: pointer;
@@ -110,8 +111,8 @@
 }
 
 .doc-btn a {
-    font-family: "Noto Sans JP", serif;
-	font-weight: 500;
+    font-family: "Mada", serif;
+    font-weight: 320;
 	font-style: normal;
 	font-size: 1rem;
     text-decoration: none;  /* Enlève le soulignement du lien */

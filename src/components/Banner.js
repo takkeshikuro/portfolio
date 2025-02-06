@@ -1,5 +1,6 @@
 import '../styles/Banner.css';
 import tm from '../assets/programming.png';
+import { motion } from "framer-motion";
 
 function Banner() {
 	let title = "Theo Morikawa";
@@ -7,7 +8,21 @@ function Banner() {
 		<header>
 			<div className="logo-title">
 				<img src={tm} alt='logo' className='banner_logo'/>
-				<h1>{title}</h1>
+				<h1>{title.split("").map((char, index) => (
+                    <motion.span
+                        key={index}
+                        className="letter"
+                        initial={{ color: "rgb(99, 51, 240)" }} 
+                        animate={{ color: "rgb(99, 51, 240)" }}
+                        whileHover={{
+                            color: ["rgb(204, 201, 187)", "rgb(227, 227, 121)"], // Gris -> Blanc
+                            scale: 1.1,
+                            transition: { duration: 0.3, ease: "easeInOut" }
+                        }}
+                    >
+                        {char === " " ? "\u00A0" : char} {/* Garde les espaces visibles */}
+                    </motion.span>
+                ))}</h1>
 			</div>
 			<nav>
 		  		<a href="#about">About</a>
