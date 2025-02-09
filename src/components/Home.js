@@ -15,7 +15,7 @@ function Home() {
                         initial={{ color: "rgb(99, 51, 240)" }} 
                         animate={{ color: "rgb(99, 51, 240)" }}
                         whileHover={{
-                            color: ["rgb(204, 201, 187)", "rgb(227, 227, 121)"], // Gris -> Blanc
+                            color: ["rgb(185, 181, 166)", "rgb(242, 242, 242)"], // Gris -> Blanc
                             scale: 1.1,
                             transition: { duration: 0.3, ease: "easeInOut" }
                         }}

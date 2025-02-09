@@ -8,6 +8,12 @@ import git from "./techstack/git.png";
 import nodejs from "./techstack/nodejs.png";
 import react from "./techstack/react.png";
 import mysql from "./techstack/mysql.png";
+import cub3d_gif from "./gif/cub3d.gif";
+import irc_gif from "./gif/irc.gif";
+import minishell_gif from "./gif/minishell.gif";
+import transc_gif from "./gif/transc.gif";
+import incep_gif from "./gif/incep.gif";
+//import portfolio_gif from "./gif/portfolio.gif";
 
 
 export {
@@ -21,4 +27,9 @@ export {
     nodejs,
     react,
     mysql,
+    cub3d_gif,
+    irc_gif,
+    minishell_gif,
+    transc_gif,
+    incep_gif,
 };

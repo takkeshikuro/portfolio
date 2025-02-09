@@ -5,7 +5,7 @@ import "../styles/App.css";
 import Banner from "./Banner";
 import Projects from "./Project";
 import About from "./About";
-import Resume from "./Resume";
+import Contact from "./Contact";
 import Home from "./Home";
 import Footer from "./Footer";
 
@@ -64,7 +64,7 @@ function App() {
 		<Projects />
 		</div>
 		<div id="resume">
-		<Resume />
+		<Contact />
 		</div>
 		<div id="footer">
 		<Footer />

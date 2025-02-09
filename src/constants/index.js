@@ -9,7 +9,50 @@ import {
 	nodejs,
 	react,
 	mysql,
+	cub3d_gif,
+    irc_gif,
+    minishell_gif,
+    transc_gif,
+    incep_gif,
 } from "../assets";
+
+const projects_list = [
+	{
+		title: "Cub3d",
+		id: 1,
+		bio: "cub quoi",
+		gif: cub3d_gif,
+		link: "https://github.com/takkeshikuro/cub3d_ok",
+	},
+	{
+		title: "FT_IRC",
+		id: 2,
+		bio: "irc quoi",
+		gif: irc_gif,
+		link: "https://github.com/takkeshikuro/ft_irc",
+	},
+	{
+		title: "Minishell",
+		id: 3,
+		bio: "minishell qwuoi",
+		gif: minishell_gif,
+		link: "https://github.com/takkeshikuro/minishell_42",
+	},
+	{
+		title: "Transcendance",
+		id: 4,
+		bio: "transc quoi",
+		gif: transc_gif,
+		link: "https://github.com/Fryo92/Transcendance",
+	},
+	{
+		title: "Inception",
+		id: 5,
+		bio: "incep quoi",
+		gif: incep_gif,
+		link: "https://github.com/takkeshikuro/Inception",
+	},
+]
 
 const technologies = [
 	{
@@ -74,4 +117,4 @@ const technologies = [
 	},
 ];
 
-export { technologies };
+export { technologies, projects_list };

@@ -1,34 +1,84 @@
 import '../styles/Projects.css';
+import { projects_list } from "../constants";
+import { useState, useEffect, useRef } from "react";
 
 function Projects() {
-	const projects_list = [
-		{ title:"Minishell", id: 1, bio:"minishell quoi"},
-		{ title:"FT_IRC", id: 2, bio:"irc en c quoi"},
-		{ title:"CUB3D", id: 3, bio:"jeu quoi"},
-		{ title:"Transcendance", id: 4, bio:"pong quoi"},
-		{ title:"Inception", id: 5, bio:"archi quoi"},
-	];
-	return (
-		<div id="projects" className="projects-list">
-			<h1>PROJECTS</h1>
-			<div >
-				{projects_list.map((projects_list) => (
-					<ProjectCard key={projects_list.id} 
-						title={projects_list.title}
-						bio={projects_list.bio} />   
-				))}
-			</div>
-		</div>
-	)
+    return (
+        <section id="projects" className="project-section">
+            <h2>PROJECTS</h2>
+            <div className='project-list'>
+                {projects_list.map((project) => (
+                    <ProjectCard key={project.id} title={project.title} bio={project.bio} gif={project.gif} link={"test"} />
+                ))}
+            </div>
+        </section>
+    );
 }
 
-function ProjectCard({title, bio}) {
-	return (
-		<div className="project-card">
-			<h2>{title}</h2>
-			<p>{bio}</p>
-		</div>
-	);
+function ProjectCard({ title, bio, gif }) {
+    const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+    const [lerpPos, setLerpPos] = useState({ x: 0, y: 0 });
+	const [isVisible, setIsVisible] = useState(false);
+    const cardRef = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        setIsVisible(true);
+                        observer.unobserve(entry.target); // Arrête d'observer une fois visible
+                    }
+                });
+            },
+            { threshold: 0.5 } // La carte devient visible quand 20% est affiché
+        );
+
+        if (cardRef.current) {
+            observer.observe(cardRef.current);
+        }
+
+        return () => observer.disconnect();
+    }, []);
+
+
+    useEffect(() => {
+        let animationFrame;
+        const lerp = (start, end, factor) => start + (end - start) * factor;
+        const updatePosition = () => {
+            setLerpPos((prev) => ({
+                x: lerp(prev.x, mousePos.x, 0.15), // Plus bas = traînée plus lente
+                y: lerp(prev.y, mousePos.y, 0.15),
+            }));
+            animationFrame = requestAnimationFrame(updatePosition);
+        };
+        updatePosition();
+        return () => cancelAnimationFrame(animationFrame);
+    }, [mousePos]);
+
+    const handleMouseMove = (e) => {
+        const { left, top } = e.currentTarget.getBoundingClientRect();
+        setMousePos({
+            x: e.clientX - left,
+            y: e.clientY - top,
+        });
+    };
+
+    return (
+        <div ref={cardRef} 
+		className={`project-card ${isVisible ? "visible" : "hidden"}`}
+			onMouseMove={handleMouseMove}
+			style={{
+				"--mouse-x": `${lerpPos.x}px`,
+				"--mouse-y": `${lerpPos.y}px`,
+			}} >
+				<div className="project-card-glow"></div>
+				<img src={gif} alt={title} className="project-card-gif" />
+
+				<h3>{title}</h3>
+				<p>{bio}</p>
+        </div>
+    );
 }
 
 export default Projects;
