@@ -14,43 +14,65 @@ import {
     minishell_gif,
     transc_gif,
     incep_gif,
+	portfolio_gif,
+	gh,
+	ig,
+	lk,
 } from "../assets";
 
 const projects_list = [
 	{
 		title: "Cub3d",
 		id: 1,
-		bio: "cub quoi",
+		bio: "Cub3D is a 3D game engine based on raycasting. It takes a 2D map and transforms \
+		it into a 3D environment, handling player movement, camera angles, and textures. \
+		This project enhances skills in graphics programming, math, and efficient memory usage.",
 		gif: cub3d_gif,
 		link: "https://github.com/takkeshikuro/cub3d_ok",
 	},
 	{
 		title: "FT_IRC",
 		id: 2,
-		bio: "irc quoi",
+		bio: "FT_IRC is an IRC server built in C++. It follows the IRC protocol, \
+		allowing multiple users to connect, send messages, and manage channels. \
+		The project reinforces knowledge of networking, sockets, and multi-threading.",
 		gif: irc_gif,
 		link: "https://github.com/takkeshikuro/ft_irc",
 	},
 	{
 		title: "Minishell",
 		id: 3,
-		bio: "minishell qwuoi",
+		bio: "Minishell is a small Unix shell built in C. It replicates fundamental shell behaviors, \
+		handling commands, pipes, redirections, and environment variables. \
+		This project deepens knowledge of system calls, process management, and signals.",
 		gif: minishell_gif,
 		link: "https://github.com/takkeshikuro/minishell_42",
 	},
 	{
 		title: "Transcendance",
 		id: 4,
-		bio: "transc quoi",
+		bio: "Transcendence is a full-stack web project where you build a real-time \
+		multiplayer Pong game using NestJS, React, and WebSockets. It includes authentication, a chat system, \
+		and user management, simulating a real-world web application.",
 		gif: transc_gif,
 		link: "https://github.com/Fryo92/Transcendance",
 	},
 	{
 		title: "Inception",
 		id: 5,
-		bio: "incep quoi",
+		bio: "Inception introduces Docker and system administration.\
+		 You must create a multi-container environment using Docker Compose, \
+		 setting up services like Nginx, MariaDB, and WordPress while ensuring security,\
+		 scalability, and isolation.",
 		gif: incep_gif,
 		link: "https://github.com/takkeshikuro/Inception",
+	},
+		{
+		title: "Personal portfolio",
+		id: 6,
+		bio: "My own Portfolio made with React and Javascript.",
+		gif: portfolio_gif,
+		link: "https://github.com/takkeshikuro/Portfolio",
 	},
 ]
 
@@ -117,4 +139,34 @@ const technologies = [
 	},
 ];
 
-export { technologies, projects_list };
+const about_text = [
+		"Hi, I’m Theo, a recent graduate from École 42 (School 42), based in Paris.",
+		"I’m currently looking for an internship where I can apply my skills, learn new things, and contribute to impactful projects.",
+		"What drives me is my natural curiosity and versatility, I like to think of myself as a Swiss Army knife.",
+		"I thrive in environments where I can solve problems, learn from others, and push the boundaries of my knowledge. Whether it’s building projects, analyzing systems, or discovering new technologies.",
+		"If you’re looking for someone resourceful, adaptable, and genuinely passionate about tech, let’s connect!",
+]
+
+const footer_link = [
+	{
+		title: "github",
+		id: 1,
+		icon: gh,
+		link: "https://github.com/takkeshikuro",
+	},
+	{
+		title: "instagram",
+		id: 2,
+		icon: ig,
+		link: "https://www.instagram.com/keshikuro/",
+	},
+	{
+		title: "linkedin",
+		id: 3,
+		icon: lk,
+		link: "https://fr.linkedin.com/in/theo-takeshi-morikawa-162099288",
+	},
+];
+
+
+export { technologies, projects_list, about_text, footer_link };

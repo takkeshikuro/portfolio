@@ -1,21 +1,22 @@
 import '../styles/Projects.css';
 import { projects_list } from "../constants";
 import { useState, useEffect, useRef } from "react";
+import tm from "../assets/github.png";
 
 function Projects() {
     return (
         <section id="projects" className="project-section">
-            <h2>PROJECTS</h2>
+            <h2>My projects</h2>
             <div className='project-list'>
                 {projects_list.map((project) => (
-                    <ProjectCard key={project.id} title={project.title} bio={project.bio} gif={project.gif} link={"test"} />
+                    <ProjectCard key={project.id} title={project.title} bio={project.bio} gif={project.gif} link={project.link} />
                 ))}
             </div>
         </section>
     );
 }
 
-function ProjectCard({ title, bio, gif }) {
+function ProjectCard({ title, bio, gif, link }) {
     const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
     const [lerpPos, setLerpPos] = useState({ x: 0, y: 0 });
 	const [isVisible, setIsVisible] = useState(false);
@@ -77,6 +78,9 @@ function ProjectCard({ title, bio, gif }) {
 
 				<h3>{title}</h3>
 				<p>{bio}</p>
+                <a href={link} target="_blank">
+                    <img src={tm} alt='logo' className='gh_logo'/>
+                </a>
         </div>
     );
 }

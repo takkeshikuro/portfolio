@@ -1,5 +1,5 @@
 import '../styles/Banner.css';
-import tm from '../assets/programming.png';
+import tm from '../assets/www_logo.png';
 import { motion } from "framer-motion";
 
 function Banner() {
@@ -7,7 +7,9 @@ function Banner() {
 	return (<div className='port-banner'>
 		<header>
 			<div className="logo-title">
-				<img src={tm} alt='logo' className='banner_logo'/>
+                <a href="#home">
+                    <img src={tm} alt='logo' className='banner_logo'/>
+                </a>
 				<h1>{title.split("").map((char, index) => (
                     <motion.span
                         key={index}
@@ -27,7 +29,7 @@ function Banner() {
 			<nav>
 		  		<a href="#about">About</a>
 		  		<a href="#projects">Projects</a>
-		  		<a href="#resume">Resume</a>
+		  		<a href="#Contact">Contact</a>
 			</nav>
 	  	</header>
 	</div>);

@@ -1,7 +1,26 @@
 
 .port-banner {
+	position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+	height: 14%;
+    background: rgba(3, 6, 36, 0.9); /* Fond semi-transparent */
+	z-index: 1000; /* Toujours au-dessus des autres éléments */
+    backdrop-filter: blur(1px); /* Effet de flou pour un style moderne */
+	transform: translateY(-100%);
+    animation: slideDown 0.9s ease-out forwards;
 	padding: 1rem;
 	padding-top: 0%;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
 }
 
 header {
@@ -16,6 +35,14 @@ header {
 	align-items: center; /* Aligne le logo et le titre verticalement */
 	justify-content: space-between;
 	width: auto;
+}
+
+.banner_logo {
+	display: inline-block;
+	height: auto;
+	width: 60px;
+	margin : 30px;
+	pointer-events: none;
 }
 
 header h1 {
@@ -49,18 +76,8 @@ header nav a:hover {
 	color: rgb(0, 123, 255); /* Change la couleur */
 	transition: all 0.3s ease; /* Animation fluide */
 }
-  
-/*header nav a:active {
-	background-color: #004085;
-}*/
 
 
-.banner_logo {
-	height: auto;
-	width: 50px;
-	margin : 30px;
-	pointer-events: none;
-}
 
 @media (prefers-reduced-motion: no-preference) {
 	.banner_logo {

@@ -1,0 +1,85 @@
+.contact-section {
+    padding: 2rem;
+    color: white;
+    text-align: center;
+}
+.contact-section h2 {
+    font-family: "Mada", serif;
+    font-weight: 300;
+    font-size: 2rem;
+}
+
+.contact-section h3 {
+    text-align: left;
+    font-family: "Bebas Neue", serif;
+    font-weight: 100;
+    font-size: 5em;
+}
+
+.contact-section p {
+    text-align: left;
+    font-family: "Bebas Neue", serif;
+    font-weight: 100;
+    font-size: 2em;
+}
+
+.box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    gap: 100px;
+    margin-top: 20px;
+}
+
+.info {
+    text-align: left;
+    margin-left: 3%;
+}
+
+.contact-box {
+    width: 550px;
+    height: 270px;
+    max-width: 500px;
+    margin: 50px;
+    padding: 2rem;
+    padding-bottom: 50px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 99%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #333;
+    color: white;
+}
+
+.contact-form textarea {
+    resize: none;
+    height: 120px;
+}
+
+.contact-form button {
+    padding: 10px;
+    width: 103%;
+    background: #6333F0;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: #4b23c8;
+}

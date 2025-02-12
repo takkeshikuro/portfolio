@@ -13,8 +13,10 @@ import irc_gif from "./gif/irc.gif";
 import minishell_gif from "./gif/minishell.gif";
 import transc_gif from "./gif/transc.gif";
 import incep_gif from "./gif/incep.gif";
-//import portfolio_gif from "./gif/portfolio.gif";
-
+import portfolio_gif from "./gif/portfolio.gif";
+import gh from "./gh.png";
+import ig from "./ig.png";
+import lk from "./lk.png";
 
 export {
     c,
@@ -32,4 +34,8 @@ export {
     minishell_gif,
     transc_gif,
     incep_gif,
+    portfolio_gif,
+    gh,
+    ig,
+    lk,
 };

@@ -1,8 +1,8 @@
 import '../styles/About.css';
-import { technologies } from "../constants";
+import { technologies, about_text } from "../constants";
 import { motion } from "framer-motion";
 import { useState } from "react";
-
+import tm from "../assets/42.png";
 
 function Stack() {
 
@@ -72,17 +72,35 @@ function Stack() {
 function About() {
 	return (
 		<section id="about" className='About-section'>
-			<h2>About me,</h2>
-				<p className='about-text'> Hi, I’m Theo, a recent graduate from École 42 (School 42), based in Paris.<br/>
-					I’m currently looking for an internship where I can apply my skills, 
-					learn new things, and contribute to impactful projects.<br/>
-					What drives me is my natural curiosity and versatility, I like to think of myself 
-					as a Swiss Army knife.<br/>
-					I thrive in environments where I can solve problems, learn from others, and push the boundaries 
-					of my knowledge. Whether it’s building projects, analyzing systems, or discovering new technologies.<br/>
-					If you’re looking for someone resourceful, adaptable, and genuinely passionate about tech, let’s connect !
-				</p>
-				<Stack />
+			<div className='about-line'>
+				<h2>About me,</h2>
+				<a href="https://42.fr/" target="_blank">
+                    <img src={tm} alt='logo' className='about_logo'/>
+                </a>
+			</div>
+			<p className='about-text'>
+				{about_text.map((line, index) => (
+					<span key={index}>
+						{line.split("").map((char, index) => (
+                    <motion.span
+                        key={index}
+                        className="letter"
+                        initial={{ color: "rgb(8, 6, 6)" }} 
+                        animate={{ color: "rgb(255, 249, 249)" }}
+                        whileHover={{
+                            color: ["rgb(19, 15, 109)", "rgb(242, 242, 242)"], // Gris -> Blanc
+                            scale: 1.1,
+                            transition: { duration: 0.3, ease: "easeInOut" }
+                        }}
+                    >
+                        {char === " " ? "\u00A0" : char} {/* Garde les espaces visibles */}
+                    </motion.span>
+                ))}
+						<br />
+					</span>
+				))}
+			</p>
+			<Stack />
 		</section>
 	)
 }
