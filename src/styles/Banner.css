@@ -51,7 +51,7 @@ header h1 {
 	font-style: normal;
 	margin : auto;
 	font-size: 2.5em;
-	color:rgb(99, 51, 240);
+	color:rgb(52, 104, 235);
 }
 
 header nav {
@@ -67,13 +67,13 @@ header nav a {
 	font-size: 1.5rem;
 
 	text-decoration: none; /* Pas de soulignement */
-	color: rgb(99, 51, 240); /* Couleur du texte */
+	color: rgb(52, 104, 235); /* Couleur du texte */
 	transition: color 0.3s ease; /* Animation sur la couleur au survol */
 }
 
 header nav a:hover {
 	font-size: 1.6rem; /* Augmente légèrement la taille au survol */
-	color: rgb(0, 123, 255); /* Change la couleur */
+	color: rgb(14, 217, 249); /* Change la couleur */
 	transition: all 0.3s ease; /* Animation fluide */
 }
 

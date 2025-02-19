@@ -9,6 +9,13 @@
     font-size: 2rem;
 }
 
+
+
+.custom-class-p{
+    padding-left: 0px;
+    margin-left: 0px;
+}
+
 .contact-section h3 {
     text-align: left;
     font-family: "Bebas Neue", serif;

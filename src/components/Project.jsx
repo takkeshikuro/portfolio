@@ -2,18 +2,22 @@ import '../styles/Projects.css';
 import { projects_list } from "../constants";
 import { useState, useEffect, useRef } from "react";
 import tm from "../assets/github.png";
+import GradientText from './GradientText'
 
 function Projects() {
     return (
         <section id="projects" className="project-section">
-            <h2>My projects</h2>
+            <h2> <GradientText
+                colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+                animationSpeed={3}
+                showBorder={false}
+                className="custom-class" > My projects </GradientText>
+            </h2>
             <div className='project-list'>
-                {projects_list.map((project) => (
-                    <ProjectCard key={project.id} title={project.title} bio={project.bio} gif={project.gif} link={project.link} />
-                ))}
+                {projects_list.map((project) => ( 
+                    <ProjectCard key={project.id} title={project.title} bio={project.bio} gif={project.gif} link={project.link} /> ))}
             </div>
-        </section>
-    );
+        </section> );
 }
 
 function ProjectCard({ title, bio, gif, link }) {
@@ -66,23 +70,20 @@ function ProjectCard({ title, bio, gif, link }) {
     };
 
     return (
-        <div ref={cardRef} 
-		className={`project-card ${isVisible ? "visible" : "hidden"}`}
+        <div ref={cardRef} className={`project-card ${isVisible ? "visible" : "hidden"}`}
 			onMouseMove={handleMouseMove}
 			style={{
 				"--mouse-x": `${lerpPos.x}px`,
-				"--mouse-y": `${lerpPos.y}px`,
-			}} >
-				<div className="project-card-glow"></div>
-				<img src={gif} alt={title} className="project-card-gif" />
+				"--mouse-y": `${lerpPos.y}px`, }} >
+			<div className="project-card-glow"></div>
+			<img src={gif} alt={title} className="project-card-gif" />
 
-				<h3>{title}</h3>
-				<p>{bio}</p>
-                <a href={link} target="_blank">
-                    <img src={tm} alt='logo' className='gh_logo'/>
-                </a>
-        </div>
-    );
+            <h3>{title}</h3>
+            <p>{bio}</p>
+            <a href={link} target="_blank">
+                <img src={tm} alt='logo' className='gh_logo'/>
+            </a>
+        </div> );
 }
 
 export default Projects;

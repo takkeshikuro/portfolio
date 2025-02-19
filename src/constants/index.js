@@ -9,6 +9,7 @@ import {
 	nodejs,
 	react,
 	mysql,
+	typescript,
 	cub3d_gif,
     irc_gif,
     minishell_gif,
@@ -120,6 +121,12 @@ const technologies = [
 		link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
 	},
 	{
+		name: "Typescript",
+		icon: typescript,
+		bio: "TypeScript is a statically typed superset of JavaScript used for building scalable, maintainable web applications.",
+		link: "https://www.typescriptlang.org/docs/",
+	},
+	{
 		name: "NodeJS",
 		icon: nodejs,
 		bio: "Node.js allows you to run JavaScript on the server-side.",
@@ -142,7 +149,7 @@ const technologies = [
 const about_text = [
 		"Hi, I’m Theo, a recent graduate from École 42 (School 42), based in Paris.",
 		"I’m currently looking for an internship where I can apply my skills, learn new things, and contribute to impactful projects.",
-		"What drives me is my natural curiosity and versatility, I like to think of myself as a Swiss Army knife.",
+		"What drives me is my natural curiosity and versatility, I consider myself a problem-solver, much like a Swiss Army knife—adaptable and equipped for various tasks.",
 		"I thrive in environments where I can solve problems, learn from others, and push the boundaries of my knowledge. Whether it’s building projects, analyzing systems, or discovering new technologies.",
 		"If you’re looking for someone resourceful, adaptable, and genuinely passionate about tech, let’s connect!",
 ]

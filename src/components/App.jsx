@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+
 import StarsCanvas from "./Stars";
 import "../styles/App.css";
 import Banner from "./Banner";
@@ -9,8 +8,8 @@ import Contact from "./Contact";
 import Home from "./Home";
 import Footer from "./Footer";
 
-function App() {
 
+function App() {
   return (
     <div className="App">
 		<StarsCanvas />
